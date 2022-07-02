@@ -1,4 +1,4 @@
-.button {
+.styled_button {
     background-color: #080707;
     border: none;
     color: white;
@@ -10,8 +10,4 @@
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-}
-
-.button:hover {
-    transform: translateY(2px);
 }

@@ -10,6 +10,7 @@
 .about__desc {
     margin-right: 20px;
     width: 50%;
+    padding: 5px;
 }
 
 .about__suggestion {
@@ -24,7 +25,11 @@
 
 .about__suggestion__cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+.card {
+    margin-left: 20px;
 }
 
 @media (max-width:750px) {
@@ -42,5 +47,14 @@
 
     .about__suggestion {
         width: 100%;
+    }
+
+    .about__suggestion__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        margin-left: 0px;
     }
 }

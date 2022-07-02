@@ -17,11 +17,17 @@ const FeaturedAbout = () => {
             <div className='about__suggestion'>
                 <p className='pab__text'>People also buy</p>
                 <div className='about__suggestion__cards'>
-                    <Card height='100px' width='auto' />
-                    <Card height='100px' width='auto' />
-                    <Card height='100px' width='auto' />
+                    <Card height='100px' />
+                    <Card height='100px' />
+                    <Card height='100px' />
+                </div>
+                <div className='pab__text'>
+                    <p>Details</p>
+                    <p>Size:1020 x 1020 pixel</p>
+                    <p>Size:15 mb</p>
                 </div>
             </div>
+
         </div>
     )
 }

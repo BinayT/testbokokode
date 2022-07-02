@@ -19,6 +19,7 @@
 
     .button {
         order: 2;
+        margin-top: 20px;
     }
 
     .featured-about {

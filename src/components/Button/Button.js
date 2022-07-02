@@ -3,7 +3,7 @@ import './styles.css'
 
 const Button = () => {
     return (
-        <button className='button'>Add to Cart</button>
+        <button className='styled_button'>Add to Cart</button>
     )
 }
 
