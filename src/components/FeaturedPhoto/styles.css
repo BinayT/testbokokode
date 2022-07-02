@@ -1,0 +1,26 @@
+.featured-photo {
+    position: relative;
+    display: flex;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.photo-of-the-day-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 30px;
+    bottom: -17px;
+    background-color: white;
+}
+
+/* @media(max-width:750px) {
+    .photo-of-the-day-text {
+        height: 30px;
+    }
+} */

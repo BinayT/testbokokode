@@ -1,0 +1,46 @@
+.featured-about {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.about__desc {
+    margin-right: 20px;
+    width: 50%;
+}
+
+.about__suggestion {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.pab__text {
+    text-align: right;
+}
+
+.about__suggestion__cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:750px) {
+    .pab__text {
+        text-align: initial;
+    }
+
+    .featured-about {
+        flex-direction: column;
+    }
+
+    .about__desc {
+        width: 100%;
+    }
+
+    .about__suggestion {
+        width: 100%;
+    }
+}

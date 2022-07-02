@@ -1,0 +1,27 @@
+.featured-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media(max-width:750px) {
+    .featured-container {
+        flex-direction: column;
+    }
+
+    .title {
+        order: 0;
+    }
+
+    .featured-photo {
+        order: 1;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .featured-about {
+        order: 3;
+    }
+}
