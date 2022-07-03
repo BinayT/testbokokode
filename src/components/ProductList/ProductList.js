@@ -14,8 +14,8 @@ const ProductList = () => {
     return (
         <div className='product__list'>
             {photos.map(el => (
-                <div className='product__card'>
-                    <img src={el} alt="Simply Image" className='product__image' />
+                <div className='product__card' key={Math.random()}>
+                    <img src={el} alt="Some alt" className='product__image' />
                     <p className='add__to__cart__text'>
                         ADD TO CART
                     </p>

@@ -6,7 +6,7 @@ import {
     PRODUCT_LIST_ERROR
 } from '../constants/productConstants'
 
-export const getAllProducts = (url) => async (dispatch) => {
+export const getAllProducts = (url) => async (dispatch, getState) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST });
         const { data } = await axios.post(

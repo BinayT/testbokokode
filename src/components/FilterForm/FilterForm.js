@@ -24,9 +24,9 @@ export const CategoryForm = () => {
             <form>
                 {categories.map(el => {
                     return (
-                        <div style={{ marginBottom: '15px' }}>
+                        <div style={{ marginBottom: '15px' }} key={el}>
                             <input type="checkbox" id={el} name={el} value={el} onClick={() => categoriesSelectionHandler(el)} />
-                            <label for={el} className="label__css" >{el}</label><br />
+                            <label htmlFor={el} className="label__css" >{el}</label><br />
                         </div>
                     )
                 })}
@@ -43,9 +43,9 @@ export const PriceRangeForm = () => {
             <form>
                 {priceRange.map(el => {
                     return (
-                        <div style={{ marginBottom: '15px' }}>
+                        <div style={{ marginBottom: '15px' }} key={el}>
                             <input type="checkbox" id={el} name={el} value={el} />
-                            <label for={el} className="label__css" >{el}</label><br />
+                            <label htmlFor={el} className="label__css" >{el}</label><br />
                         </div>
                     )
                 })}
