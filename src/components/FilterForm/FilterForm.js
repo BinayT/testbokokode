@@ -20,7 +20,7 @@ export const CategoryForm = () => {
                     )
                 })}
             </form>
-            <hr />
+            <hr style={{ width: '50%', marginLeft: '0' }} />
         </>
     )
 }

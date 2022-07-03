@@ -7,3 +7,9 @@
 .category__selection {
     flex: 1;
 }
+
+@media (max-width:850px) {
+    .category__selection {
+        display: none;
+    }
+}
