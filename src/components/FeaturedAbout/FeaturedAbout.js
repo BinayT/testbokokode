@@ -1,26 +1,21 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
 
 import './styles.css'
 
 import Card from '../Card/Card'
 
-const FeaturedAbout = () => {
-
-    const { products } = useSelector(state => state.productList);
+const FeaturedAbout = ({ data }) => {
 
     const fallbackDesc = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text."
     const fallbackCategory = 'Category Name'
-    const fallbackName = 'Samurai King'
-
-    const featuredProduct = products.data.find(el => el.featured);
+    const fallbackName = 'Samurai King Resting'
 
     return (
         <div className='featured-about'>
             <div className='about__desc'>
-                <p>About the {featuredProduct !== undefined ? featuredProduct.name : fallbackName}</p>
-                <p style={{ textTransform: 'capitalize' }}>{featuredProduct !== undefined ? featuredProduct.category : fallbackCategory}</p>
-                <p>{featuredProduct !== undefined ? featuredProduct.description : fallbackDesc}</p>
+                <p>About the {data !== undefined ? data.name : fallbackName}</p>
+                <p style={{ textTransform: 'capitalize' }}>{data !== undefined ? data.category : fallbackCategory}</p>
+                <p>{data !== undefined ? data.description : fallbackDesc}</p>
             </div>
             <div className='about__suggestion'>
                 <p className='pab__text'>People also buy</p>
