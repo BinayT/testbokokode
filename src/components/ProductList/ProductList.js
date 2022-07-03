@@ -16,6 +16,9 @@ const ProductList = () => {
             {photos.map(el => (
                 <div className='product__card'>
                     <img src={el} alt="Simply Image" className='product__image' />
+                    <p className='add__to__cart__text'>
+                        ADD TO CART
+                    </p>
                 </div>
             ))}
         </div>
