@@ -1,0 +1,9 @@
+.product__middle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.category__selection {
+    flex: 1;
+}

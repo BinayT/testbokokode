@@ -1,0 +1,9 @@
+.checkbox__text {
+    font-size: large;
+    font-weight: bold;
+}
+
+.label__css {
+    text-transform: capitalize;
+    margin-left: 5px;
+}
