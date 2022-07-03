@@ -3,9 +3,9 @@ import ProductTop from '../ProductTop/ProductTop'
 
 const Products = () => {
     return (
-        <div>
+        <>
             <ProductTop />
-        </div>
+        </>
     )
 }
 

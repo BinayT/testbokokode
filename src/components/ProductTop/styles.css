@@ -1,5 +1,11 @@
+.product-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .photography__text {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .premium__photo__text {
