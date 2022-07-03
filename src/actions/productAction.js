@@ -12,7 +12,7 @@ export const getAllProducts = (url) => async (dispatch) => {
         const { data } = await axios.post(
             url
         );
-        dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
+        dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data.data });
     } catch (error) {
         dispatch({
             type: PRODUCT_LIST_ERROR,
