@@ -16,15 +16,10 @@ function App() {
 
   const { loading, error, products } = useSelector(state => state.productList);
 
-  /* return (
-    <div className='main-container'>
-      {loading ? <p>Loading</p> : error ? <p>Error: {error}</p> : <p>{JSON.stringify(products.current_page)}</p>}
-    </div>
-  ); */
-
   return (
     <div className='main-container'>
-      {loading ? <p>Loading</p> : error ? <p>Error: {error}</p> : <HomeScreen />}
+      {loading ? <p>Loading</p> : error ? <p>Error: {error}</p> : products === undefined ? <p>Loading data...</p> : <HomeScreen />}
+      {/* {loading ? <p>Loading</p> : error ? <p>Error: {error}</p> : <HomeScreen />} */}
     </div>
   )
 }
