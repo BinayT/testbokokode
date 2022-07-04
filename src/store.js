@@ -3,10 +3,12 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { productListReducer } from './reducers/productReducer'
+import { selectedCategoryReducer } from './reducers/filterReducer'
 
 
 const reducer = combineReducers({
     productList: productListReducer,
+    selectedCategory: selectedCategoryReducer
 });
 
 const middleware = [thunk];
