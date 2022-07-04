@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Card = ({ height }) => {
+const Card = ({ height, src }) => {
     return (
         <div className='card'>
-            <img style={{ height: height }} src='https://i.pinimg.com/originals/c9/8e/9f/c98e9f4a3bd74ff93facc37030bc87c1.jpg' alt="Egg Balloon" />
+            <img style={{ height: height, width: '100%' }} src={src} alt='Simple Placeholder' />
         </div>
     )
 }

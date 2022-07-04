@@ -16,7 +16,7 @@ const Featured = () => {
             <p className='title'>{featuredProduct !== undefined ? featuredProduct.name : 'Samurai King Resting'}</p>
             <Button />
             <FeaturedPhoto data={featuredProduct} />
-            <FeaturedAbout data={featuredProduct} />
+            <FeaturedAbout featuredData={featuredProduct} peopleAlsoBuy={products} />
         </div>
     )
 }
