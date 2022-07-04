@@ -7,10 +7,17 @@ import sort from '../../assets/sort.svg'
 
 const Sort = () => {
   return (
-    <div className='sort'>
-      <p style={{ marginRight: '10px' }}><img alt="Sort" src={sort} /> Sort By </p>
-      <p>Price   <img alt='dropdown' src={dropdown} /></p>
-    </div>
+    <>
+      <div className='sort'>
+        <p style={{ marginRight: '10px' }}><img alt="Sort" src={sort} /> Sort By </p>
+        <p>Price   <img alt='dropdown' src={dropdown} /></p>
+
+      </div>
+      <div className='sort__small'>
+        <img alt='filter' src={filter} />
+      </div>
+    </>
+
   )
 }
 

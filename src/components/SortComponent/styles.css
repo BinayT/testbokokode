@@ -3,3 +3,19 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.sort__small {
+    display: none;
+}
+
+@media (max-width:850px) {
+    .sort {
+        display: none;
+    }
+
+    .sort__small {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

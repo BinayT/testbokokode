@@ -8,15 +8,19 @@ import {
 
 export const getAllProducts = (url) => async (dispatch) => {
     try {
+
         dispatch({ type: PRODUCT_LIST_REQUEST });
         const { data } = await axios.post(
             url
         );
         dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data.data });
+
     } catch (error) {
+
         dispatch({
             type: PRODUCT_LIST_ERROR,
             payload: error.message,
         });
+
     }
 }
