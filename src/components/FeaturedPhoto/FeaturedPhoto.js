@@ -4,12 +4,13 @@ import './styles.css'
 
 const FeaturedPhoto = ({ data }) => {
     const fallbackPhoto = 'https://m.media-amazon.com/images/I/81ExZCXO2oL._AC_SL1500_.jpg'
+    const fallbackAlt = 'Today\'s best'
 
     return (
         <div className='featured-photo'>
             <img
                 src={data !== undefined ? data.image.src : fallbackPhoto}
-                alt="Today's best"
+                alt={data !== undefined ? data.image.alt : fallbackAlt}
                 className='responsive'
             />
 
