@@ -4,14 +4,14 @@ import { PriceRangeForm } from "../FilterForm/FilterForm"
 import ProductList from '../ProductList/ProductList'
 import './styles.css'
 
-const ProductMiddle = () => {
+const ProductMiddle = ({ data }) => {
     return (
         <div className="product__middle">
             <div className="category__selection">
                 <CategoryForm />
                 <PriceRangeForm />
             </div>
-            <ProductList />
+            <ProductList data={data} />
         </div>
     )
 }
