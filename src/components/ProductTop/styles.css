@@ -1,7 +1,8 @@
-.product-top {
+.product__top {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin: 20px 0;
 }
 
 .photography__text {
