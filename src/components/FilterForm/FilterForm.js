@@ -1,28 +1,48 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from 'react-redux';
 
 import './styles.css'
 import { handleCategory } from '../../actions/filterAction'
+import { getAllProducts } from '../../actions/productAction'
+
 
 const categories = ['people', 'premium', 'pets', 'food', 'landmarks', 'cities', 'nature'];
 const priceRange = ['Lower than $20', '$20 - $100', '$100 - $200', 'More than $200'];
+const url = 'https://technical-frontend-api.bokokode.com/api/products'
 
 export const CategoryForm = () => {
-    const categoriesSelected = []
-
-    const categoriesSelectionHandler = (e) => {
-        if (categoriesSelected.includes(e)) {
-            categoriesSelected.splice(categoriesSelected.indexOf(e), 1);
-        } else {
-            categoriesSelected.push(e)
-        }
-        dispatch(handleCategory(categoriesSelected))
-    }
+    const [categoryClicked, setCategoryClicked] = useState(false)
+    const [firstFetch, setFirstFetch] = useState(true)
+    const [categoriesSelected, setCategoriesSelected] = useState([])
 
     const dispatch = useDispatch();
+    const { selectedCategory } = useSelector(state => state.selectedCategory);
+
+    const categoriesSelectionHandler = (e) => {
+        setCategoryClicked(!categoryClicked)
+        setFirstFetch(false)
+        if (categoriesSelected.includes(e)) {
+            setCategoriesSelected(categoriesSelected.filter(el => el !== e));
+        } else {
+            setCategoriesSelected([...categoriesSelected, e])
+        }
+    }
 
     useEffect(() => {
-    }, [categoriesSelectionHandler])
+        dispatch(handleCategory(categoriesSelected))
+    }, [categoriesSelected])
+
+    useEffect(() => {
+        const body = {
+            categories: selectedCategory
+        }
+
+        console.log(categoriesSelected)
+
+        if (selectedCategory.length !== 0 || !firstFetch) {
+            dispatch(getAllProducts(url, body))
+        }
+    }, [selectedCategory])
 
     return (
         <>

@@ -4,7 +4,7 @@ export const selectedCategoryReducer = (state = { selectedCategory: [] }, action
     switch (action.type) {
 
         case HANDLE_CATEGORY:
-            return { selectedCategory: action.payload };
+            return { ...state, selectedCategory: action.payload };
         default:
             return state;
     }
