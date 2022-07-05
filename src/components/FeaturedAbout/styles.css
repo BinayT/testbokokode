@@ -25,7 +25,8 @@
 
 .about__suggestion__cards {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-left: 50px;
 }
 
 .card {
@@ -52,6 +53,7 @@
     .about__suggestion__cards {
         display: flex;
         justify-content: space-between;
+        margin-left: 0px;
     }
 
     .card {
