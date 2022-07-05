@@ -22,9 +22,6 @@ const FeaturedAbout = ({ featuredData, peopleAlsoBuy }) => {
                 <div className='about__suggestion__cards'>
                     {peopleAlsoBuy.data.slice(0, 3).map(el =>
                         <Card height='100px' src={el.image} key={el.description} />)}
-                    {/* <Card height='100px' />
-                    <Card height='100px' />
-                    <Card height='100px' /> */}
                 </div>
                 <div className='pab__text'>
                     <p>Details</p>
