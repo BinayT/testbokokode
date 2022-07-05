@@ -1,0 +1,21 @@
+.cart__box {
+    position: absolute;
+    right: 0;
+    top: 10;
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+.cart__box__product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart__box__details {
+    margin-right: 5px;
+    ;
+}
