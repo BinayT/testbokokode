@@ -10,7 +10,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const url = 'https://technical-frontend-api.bokokode.com/api/products?page=2'
+    const url = 'https://technical-frontend-api.bokokode.com/api/products'
     dispatch(getAllProducts(url))
   }, []);
 

@@ -3,6 +3,7 @@
     margin-top: 20px;
     display: flex;
     width: 100%;
+    height: 500px;
 }
 
 .responsive {
@@ -21,8 +22,8 @@
     background-color: white;
 }
 
-/* @media(max-width:750px) {
-    .photo-of-the-day-text {
-        height: 30px;
+@media(max-width:750px) {
+    .featured-photo {
+        height: 400px;
     }
-} */
+}
